@@ -1,0 +1,29 @@
+{
+  "name": "eslint-plugin-use-encapsulation",
+  "version": "0.1.0",
+  "description": "An ESLint rule to encourage using custom hook abstractions",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "React",
+    "Hooks"
+  ],
+  "author": "Kyle Shevlin <kyle.a.shevlin@gmail.com> (https://kyleshevlin.com)",
+  "repository": "git@github.com:kyleshevlin/eslint-plugin-use-encapsulation.git",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "eslint": ">=0.8.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.17.0",
+    "jest": "^26.6.3"
+  }
+}
