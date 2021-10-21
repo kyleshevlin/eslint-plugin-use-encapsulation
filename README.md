@@ -31,4 +31,4 @@ And configure it in your ESLint config:
 }
 ```
 
-For more details about options and configuration, please refer to the `docs/prefer-custom-hooks.md`.
+For more details about options and configuration, please refer to the `docs/rules/prefer-custom-hooks.md`.
