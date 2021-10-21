@@ -24,7 +24,7 @@ And configure it in your ESLint config:
 
 ```javascript
 {
-  plugins: ['@kyleshevlin'],
+  plugins: ['use-encapsulation'],
   rules: [
     "use-encapsulation/prefer-custom-hooks": "error",
   ]
