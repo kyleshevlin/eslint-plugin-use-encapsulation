@@ -135,9 +135,9 @@ While it is not recommended, the `allow` list is an array of React hooks that wi
 
 ```json
 {
-  "plugins": ["@kyleshevlin"],
+  "plugins": ["use-encapsulation"],
   "rules": [
-    "@kyleshevlin/prefer-custom-hooks": ["error", { "allow": ["useMemo"] }]
+    "use-encapsulation/prefer-custom-hooks": ["error", { "allow": ["useMemo"] }]
   ]
 }
 ```
@@ -150,9 +150,9 @@ On the other hand, the `block` list is an array of additional custom hooks that 
 
 ```json
 {
-  "plugins": ["@kyleshevlin"],
+  "plugins": ["use-encapsulation"],
   "rules": [
-    "@kyleshevlin/prefer-custom-hooks": [
+    "use-encapsulation/prefer-custom-hooks": [
       "error",
       { "block": ["useMyCustomHook"] }
     ]
