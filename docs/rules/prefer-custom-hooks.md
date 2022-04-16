@@ -137,7 +137,10 @@ While it is not recommended, the `allow` list is an array of React hooks that wi
 {
   "plugins": ["use-encapsulation"],
   "rules": [
-    "use-encapsulation/prefer-custom-hooks": ["error", { "allow": ["useMemo"] }]
+    "use-encapsulation/prefer-custom-hooks": [
+      "error",
+      { "allow": ["useMemo"] }
+    ]
   ]
 }
 ```
