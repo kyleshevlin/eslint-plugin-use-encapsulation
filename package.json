@@ -18,6 +18,7 @@
   ],
   "author": "Kyle Shevlin <kyle.a.shevlin@gmail.com> (https://kyleshevlin.com)",
   "repository": "git@github.com:kyleshevlin/eslint-plugin-use-encapsulation.git",
+  "homepage": "https://github.com/kyleshevlin/eslint-plugin-use-encapsulation",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
