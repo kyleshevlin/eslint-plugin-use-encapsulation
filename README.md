@@ -20,6 +20,17 @@ Or
 yarn add -D eslint-plugin-use-encapsulation
 ```
 
+#### Set rule in .eslintrc.json
+
+```json
+{
+  "plugins": ["use-encapsulation"],
+  "rules": {
+    "use-encapsulation/prefer-custom-hooks": ["error"]
+  }
+}
+```
+
 ## The Philosophy
 
 ### Bad
