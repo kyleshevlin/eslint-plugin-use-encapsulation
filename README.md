@@ -20,7 +20,7 @@ Or
 yarn add -D eslint-plugin-use-encapsulation
 ```
 
-#### Set rule in .eslintrc.json
+## Configuration
 
 ```json
 {
