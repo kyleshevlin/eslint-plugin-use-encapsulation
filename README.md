@@ -22,6 +22,27 @@ yarn add -D eslint-plugin-use-encapsulation
 
 ## Configuration
 
+### ESLint 9 Flat Config
+
+```js
+import eslintPluginUseEncapsulation from 'eslint-plugin-use-encapsulation'
+
+export default [
+  {
+    plugins: {
+      'use-encapsulation': eslintPluginUseEncapsulation
+    },
+    rules: {
+      'use-encapsulation/prefer-custom-hooks': 'error'
+    }
+  }
+]
+```
+
+**Note:** With ESLint 9's flat config, customizing the rule with options (e.g. `allow`) is currently not supported. 👀
+
+### ESLint 8 (Legacy)
+
 ```json
 {
   "plugins": ["use-encapsulation"],
@@ -155,6 +176,8 @@ const MyComponent = () => { useMyCustomHook(); return null }
 ```
 
 ## Options
+
+**Note:** These options are only available in ESLint 8. See previous 📓 note about ESLint 9 flat config compatibility ☝️.
 
 There are two options for `prefer-custom-hooks`: an `allow` list, and a `block` list.
 
