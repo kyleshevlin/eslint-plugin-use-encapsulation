@@ -1,1 +1,7 @@
 node_modules/
+
+# Allow authors to have their own `settings.json` file without forcing it.
+.vscode
+
+# This could be generated with `yarn pack` for locally testing the package.
+*.tgz
