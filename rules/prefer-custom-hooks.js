@@ -23,9 +23,37 @@ const DEFAULT_OPTIONS = {
   allow: [],
 }
 
+const MESSAGE =
+  'Do not use React Hooks directly in a component. Abstract the functionality into a custom hook and use that instead.'
+
 module.exports = {
   meta: {
     type: 'suggestion',
+    docs: {
+      description: 'Enforce using React hooks only inside custom hooks',
+      recommended: 'error',
+    },
+    schema: [
+      {
+        type: 'object',
+        properties: {
+          allow: {
+            type: 'array',
+            items: { type: 'string' },
+            uniqueItems: true,
+          },
+          block: {
+            type: 'array',
+            items: { type: 'string' },
+            uniqueItems: true,
+          },
+        },
+        additionalProperties: false,
+      },
+    ],
+    messages: {
+      noDirectHooks: MESSAGE,
+    },
   },
   create(context) {
     const userOptions = context.options[0] || {}
@@ -43,8 +71,7 @@ module.exports = {
           if (hookParent && !HOOK_PATTERN.test(hookParent.id.name)) {
             context.report({
               node,
-              message:
-                'Do not use React Hooks directly in a component. Abstract the functionality into a custom hook and use that instead.',
+              messageId: 'noDirectHooks',
             })
           }
         }
