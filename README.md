@@ -8,25 +8,46 @@ This rule does not allow using the hooks provided by the React library directly 
 
 ## Installation
 
-Install the plugin:
-
-```
-npm install --save-dev eslint-plugin-use-encapsulation
-```
-
-Or
-
-```
-yarn add -D eslint-plugin-use-encapsulation
-```
+Install the plugin: `npm install --save-dev eslint-plugin-use-encapsulation` or `yarn add -D eslint-plugin-use-encapsulation`.
 
 ## Configuration
+
+### ESLint 9 Flat Config
+
+```js
+import eslintPluginUseEncapsulation from 'eslint-plugin-use-encapsulation'
+
+export default [
+  {
+    plugins: {
+      'use-encapsulation': eslintPluginUseEncapsulation,
+    },
+    rules: {
+      'use-encapsulation/prefer-custom-hooks': [
+        'error',
+        {
+          allow: ['useMemo'], // optional
+          block: ['useMyCustomHook'], // optional
+        },
+      ],
+    },
+  },
+]
+```
+
+### ESLint 8 (Legacy)
 
 ```json
 {
   "plugins": ["use-encapsulation"],
   "rules": {
-    "use-encapsulation/prefer-custom-hooks": ["error"]
+    "use-encapsulation/prefer-custom-hooks": [
+      "error",
+      {
+        "allow": ["useMemo"], // optional
+        "block": ["useMyCustomHook"] // optional
+      }
+    ]
   }
 }
 ```
@@ -158,7 +179,7 @@ const MyComponent = () => { useMyCustomHook(); return null }
 
 There are two options for `prefer-custom-hooks`: an `allow` list, and a `block` list.
 
-#### `allow`
+### `allow`
 
 While it is not recommended, the `allow` list is an array of React hooks that will be exempted from triggering the rule. For example, you may want to allow `useMemo` to be used directly in components. You can set that up like so:
 
@@ -166,17 +187,14 @@ While it is not recommended, the `allow` list is an array of React hooks that wi
 {
   "plugins": ["use-encapsulation"],
   "rules": {
-    "use-encapsulation/prefer-custom-hooks": [
-      "error",
-      { "allow": ["useMemo"] }
-    ]
+    "use-encapsulation/prefer-custom-hooks": ["error", { "allow": ["useMemo"] }]
   }
 }
 ```
 
 It is recommended that you use the `allow` option sparingly. It is likely wiser to use the occasional `eslint-disable` than to allow a particular hook throughout your project.
 
-#### `block`
+### `block`
 
 On the other hand, the `block` list is an array of additional custom hooks that you would like to prevent from being used directly in a component. Perhaps you have a custom hook that really should be encapsulated with other hooks. Add it to the block list like so:
 
