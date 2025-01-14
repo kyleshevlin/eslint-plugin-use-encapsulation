@@ -1,4 +1,4 @@
-import preferCustomHooks from './rules/prefer-custom-hooks'
+import preferCustomHooks from './rules/prefer-custom-hooks.js'
 
 export default {
   rules: {

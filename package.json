@@ -4,13 +4,18 @@
   "description": "An ESLint rule to encourage using custom hook abstractions",
   "main": "index.js",
   "files": [
-    "*"
+    "index.js",
+    "rules/*.js",
+    "src/*.js"
   ],
   "scripts": {
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
     "test:watch": "node --experimental-vm-modules node_modules/jest/bin/jest.js --watch"
   },
   "type": "module",
+  "exports": {
+    ".": "./index.js"
+  },
   "keywords": [
     "eslint",
     "eslintplugin",

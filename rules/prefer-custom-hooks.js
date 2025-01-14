@@ -1,5 +1,5 @@
-import { HOOK_PATTERN, REACT_HOOKS } from '../src/constants'
-import { difference, union } from '../src/utils'
+import { HOOK_PATTERN, REACT_HOOKS } from '../src/constants.js'
+import { difference, union } from '../src/utils.js'
 
 function getHookParent(node) {
   if (node.type === 'Program') return
