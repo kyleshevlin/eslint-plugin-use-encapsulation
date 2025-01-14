@@ -7,9 +7,10 @@
     "*"
   ],
   "scripts": {
-    "test": "jest",
-    "test:watch": "jest --watch"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test:watch": "node --experimental-vm-modules node_modules/jest/bin/jest.js --watch"
   },
+  "type": "module",
   "keywords": [
     "eslint",
     "eslintplugin",
@@ -27,6 +28,6 @@
   },
   "devDependencies": {
     "eslint": "^7.17.0",
-    "jest": "^26.6.3"
+    "jest": "^29.7.0"
   }
 }
