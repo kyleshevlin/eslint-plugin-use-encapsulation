@@ -1,4 +1,4 @@
-function difference(a, b) {
+export function difference(a, b) {
   const result = new Set(a)
 
   for (const item of b) {
@@ -10,7 +10,7 @@ function difference(a, b) {
   return result
 }
 
-function union(a, b) {
+export function union(a, b) {
   const result = new Set(a)
 
   for (const item of b) {
@@ -18,9 +18,4 @@ function union(a, b) {
   }
 
   return result
-}
-
-module.exports = {
-  difference,
-  union,
 }

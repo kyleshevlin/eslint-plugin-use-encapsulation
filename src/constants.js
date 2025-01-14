@@ -1,6 +1,5 @@
-const HOOK_PATTERN = /^use/
-
-const REACT_HOOKS = new Set([
+export const HOOK_PATTERN = /^use/
+export const REACT_HOOKS = new Set([
   'useCallback',
   'useContext',
   'useDebugValue',
@@ -17,8 +16,3 @@ const REACT_HOOKS = new Set([
   'useSyncExternalStore',
   'useTransition',
 ])
-
-module.exports = {
-  HOOK_PATTERN,
-  REACT_HOOKS,
-}
