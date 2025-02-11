@@ -1,5 +1,5 @@
-const { HOOK_PATTERN, REACT_HOOKS } = require('../src/constants')
-const { difference, union } = require('../src/utils')
+import { HOOK_PATTERN, REACT_HOOKS } from '../src/constants.js'
+import { difference, union } from '../src/utils.js'
 
 function getHookParent(node) {
   if (node.type === 'Program') return
@@ -26,7 +26,7 @@ const DEFAULT_OPTIONS = {
 const MESSAGE =
   'Do not use React Hooks directly in a component. Abstract the functionality into a custom hook and use that instead.'
 
-module.exports = {
+export default {
   meta: {
     type: 'suggestion',
     docs: {

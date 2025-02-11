@@ -1,6 +1,6 @@
-const preferCustomHooks = require('./rules/prefer-custom-hooks')
+import preferCustomHooks from './rules/prefer-custom-hooks.js'
 
-module.exports = {
+export default {
   rules: {
     'prefer-custom-hooks': preferCustomHooks,
   },
